@@ -1,8 +1,17 @@
 import React from 'react';
 import { Avatar, Dropdown, Navbar } from "flowbite-react";
 import { DarkThemeToggle, Flowbite } from "flowbite-react";
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
+    const link = <>
+        <NavLink to="/" className={({isActive})=> isActive ? "bg-emerald-500 px-2 py-1 rounded-md" : ""}>Home</NavLink>
+        <NavLink to="/feature" className={({isActive})=> isActive ? "bg-emerald-500 px-2 py-1 rounded-md" : ""}>Featured Blogs</NavLink>
+        <NavLink to="/blogs"className={({isActive})=> isActive ? "bg-emerald-500 px-2 py-1 rounded-md" : ""}>All blogs</NavLink>
+        <NavLink to="/addBlogs"className={({isActive})=> isActive ? "bg-emerald-500 px-2 py-1 rounded-md" : ""}>Add Blog</NavLink>
+        <NavLink to="/wishlist"className={({isActive})=> isActive ? "bg-emerald-500 px-2 py-1 rounded-md" : ""}>Wishlist</NavLink>
+
+    </>
     return (
         <div>
 
@@ -12,14 +21,14 @@ const Header = () => {
                     <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Flowbite React</span>
                 </Navbar.Brand>
                 <div className="flex md:order-2">
-                <Flowbite >
+                    <Flowbite >
                         <DarkThemeToggle />
                     </Flowbite>
                     <Dropdown
                         arrowIcon={false}
                         inline
                         label={
-                            <Avatar  className='ml-5' alt="User settings" img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" rounded />
+                            <Avatar className='ml-5' alt="User settings" img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" rounded />
                         }
                     >
                         <Dropdown.Header>
@@ -34,14 +43,11 @@ const Header = () => {
                     </Dropdown>
                     <Navbar.Toggle />
                 </div>
-                <Navbar.Collapse>
-                    <Navbar.Link href="#" active>
-                        Home
-                    </Navbar.Link>
-                    <Navbar.Link href="#">About</Navbar.Link>
-                    <Navbar.Link href="#">Services</Navbar.Link>
-                    <Navbar.Link href="#">Pricing</Navbar.Link>
-                    <Navbar.Link href="#">Contact</Navbar.Link>
+                <Navbar.Collapse className='dark:text-white'>
+
+                  {
+                    link
+                  }
                 </Navbar.Collapse>
             </Navbar>
 
