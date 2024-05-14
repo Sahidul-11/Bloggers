@@ -21,7 +21,7 @@ const Provider = ({ children }) => {
         })
     }
     // Sign in 
-    const singIn = (email, password) => {
+    const singInUser = (email, password) => {
         setLoading(true)
         return signInWithEmailAndPassword(Auth, email, password)
     }
@@ -61,7 +61,7 @@ const Provider = ({ children }) => {
         loading,
         setLoading,
         userUpdate,
-        singIn,
+        singInUser,
         signOutUser
 
     }
