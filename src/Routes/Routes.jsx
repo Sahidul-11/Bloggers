@@ -9,6 +9,7 @@ import AddBlogs from "../Pages/AddBlogs";
 import Blogs from "../Pages/Blogs";
 import List from "../Pages/List";
 import Feature from "../Pages/Feature";
+import PrivateRoutes from "./PrivateRoutes";
 
   const router = createBrowserRouter([
     {
@@ -29,7 +30,9 @@ import Feature from "../Pages/Feature";
         },
         {
           path: "/addBlogs",
-          element :<AddBlogs></AddBlogs>
+          element :<PrivateRoutes>
+            <AddBlogs></AddBlogs>
+          </PrivateRoutes>
         },
         {
           path: "/blogs",
