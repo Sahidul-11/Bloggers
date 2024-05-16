@@ -10,6 +10,7 @@ import Blogs from "../Pages/Blogs";
 import List from "../Pages/List";
 import Feature from "../Pages/Feature";
 import PrivateRoutes from "./PrivateRoutes";
+import Details from "../Components/Details";
 
   const router = createBrowserRouter([
     {
@@ -37,6 +38,12 @@ import PrivateRoutes from "./PrivateRoutes";
         {
           path: "/blogs",
           element :<Blogs></Blogs>
+        },
+        {
+          path: "/details/:id",
+          element :<PrivateRoutes>
+            <Details></Details>
+          </PrivateRoutes>
         },
         {
           path: "/wishlist",

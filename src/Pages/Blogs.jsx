@@ -5,38 +5,38 @@ import BlogCard from '../Components/BlogCard';
 import { Banner, Button, TextInput } from 'flowbite-react';
 
 const Blogs = () => {
-  
-    const [category , setCategory] =useState("")
-    const [search, setSearch]=useState('')
-  
-    const { isPending, isError,data, error, refetch } = useQuery({
+
+    const [category, setCategory] = useState("");
+    const [search, setSearch] = useState('');
+
+    const { isPending, isError, data, error, refetch } = useQuery({
         queryKey: ['Blogs'],
-        queryFn: () => blogFunction(category , search),
+        queryFn: () => blogFunction(category, search),
     })
 
-    const blogFunction = async (a , b) => {
+    const blogFunction = async (a, b) => {
         const { data } = await axios.get(`http://localhost:5000/blogs?Category=${a}&search=${b}`)
         return data
-       
+
     }
     console.log(data)
-    const handleSort = (e)=>{
+    const handleSort = (e) => {
         const caa = e.target.value;
         setSearch('')
         setCategory(caa)
- 
-     }
-     const handleSearch = (e)=>{
+
+    }
+    const handleSearch = (e) => {
         e.preventDefault()
         const text = e.target.search.value;
         console.log(text)
         setSearch(text)
-     }
-     useEffect(()=>{
+    }
+    useEffect(() => {
         refetch()
-     },[category, search])
-   
-     
+    }, [category, search])
+
+
     if (isPending) {
         return <span>Loading...</span>
     }
@@ -45,7 +45,7 @@ const Blogs = () => {
         return <span>Error: {error.message}</span>
 
     }
-    
+
     return (
         <div>
             <div className='flex justify-center mt-10 dark:bg-gray-700 py-6 rounded-lg gap-20 '>
@@ -67,11 +67,11 @@ const Blogs = () => {
 
                     </select>
                 </div>
-                <Banner className='pt-5'>
+                <Banner className='pt-5' >
                     <div className="flex w-full items-center justify-between border-b border-gray-200 bg-gray-50 p-4 dark:border-gray-600 dark:bg-gray-700">
-                        <div className="mx-auto flex w-full shrink-0 items-center sm:w-auto">
-                            <form onSubmit={handleSearch} action="#" className="flex w-full flex-col items-center md:flex-row md:gap-x-3">
-                                <TextInput name='search' id="email" placeholder="Write tto Search" required type="text" />
+                        <div className="mx-auto flex w-full shrink-0 items-center sm:w-auto ">
+                            <form onSubmit={handleSearch} action="#" className="flex w-full  flex-col items-center md:flex-row md:gap-x-3">
+                                <TextInput className='dark:text-white' name='search' id="email" placeholder="Write to Search" required type="text" />
                                 <Button type="submit">Search</Button>
                             </form>
                         </div>
@@ -80,11 +80,11 @@ const Blogs = () => {
             </div>
 
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-10 mx-2 md:mx-20">
-                { data.length >0?
-                data.map(a => <BlogCard key={a._id} ACard={a}></BlogCard>) :
-                <h1 className='text-center text-3xl font-bold col-span-3'> No Blogs Found</h1>
-            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-10 mx-2 md:mx-20 gap-8">
+                {data.length > 0 ?
+                    data.map(a => <BlogCard key={a._id} ACard={a}></BlogCard>) :
+                    <h1 className='text-center text-3xl font-bold col-span-3'> No Blogs Found</h1>
+
                 }
             </div>
         </div>

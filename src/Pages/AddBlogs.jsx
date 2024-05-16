@@ -8,14 +8,16 @@ const AddBlogs = () => {
     const handleAdd =(e)=>{
         e.preventDefault()
         const authorEmail = user.email;
+        const authorName = user.displayName;
+        const authorImage = user.photoURL
+        const author = {authorEmail , authorName , authorImage};
         const form = e.target;
         const title = form.title.value;
         const Category = form.Category.value;
         const URL = form.URL.value;
         const shortDes = form.shortDes.value;
         const Description = form.Description.value;
-        console.log(title ,Category, URL,shortDes, Description , authorEmail)
-        const blog = {title ,Category, URL,shortDes, Description , authorEmail}
+        const blog = {title ,Category, URL,shortDes, Description , author}
         axios.post("http://localhost:5000/blogs", blog)
         .then(res=>{
             if (res.data) {
