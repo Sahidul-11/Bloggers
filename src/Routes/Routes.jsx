@@ -8,10 +8,10 @@ import SignUp from "../Pages/SignUp";
 import AddBlogs from "../Pages/AddBlogs";
 import Blogs from "../Pages/Blogs";
 import List from "../Pages/List";
-import Feature from "../Pages/Feature";
 import PrivateRoutes from "./PrivateRoutes";
 import Details from "../Components/Details";
 import Update from "../Components/Update";
+import FeaturedBlogs from "../Pages/FeaturedBlogs";
 
 const router = createBrowserRouter([
   {
@@ -60,7 +60,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/feature",
-        element: <Feature></Feature>
+        element:<FeaturedBlogs></FeaturedBlogs>
       },
     ]
   },

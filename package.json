@@ -10,11 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
     "@headlessui/react": "^2.0.3",
+    "@mui/material": "^5.15.18",
     "@tanstack/react-query": "^5.36.0",
     "axios": "^1.6.8",
     "firebase": "^10.11.1",
     "flowbite-react": "^0.9.0",
+    "ka-table": "^9.1.0",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",
     "react": "^18.2.0",
