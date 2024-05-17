@@ -1,6 +1,6 @@
 import {
-    createBrowserRouter,
-  } from "react-router-dom";
+  createBrowserRouter,
+} from "react-router-dom";
 import Main from "../layOut/Main";
 import Home from "../Pages/Home";
 import SignIn from "../Pages/SignIn";
@@ -11,49 +11,58 @@ import List from "../Pages/List";
 import Feature from "../Pages/Feature";
 import PrivateRoutes from "./PrivateRoutes";
 import Details from "../Components/Details";
+import Update from "../Components/Update";
 
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element:<Main></Main>,
-      children :[
-        {
-          path: "/",
-          element :<Home></Home>
-        },
-        {
-          path: "/signIn",
-          element :<SignIn></SignIn>
-        },
-        {
-          path: "/signUp",
-          element :<SignUp></SignUp>
-        },
-        {
-          path: "/addBlogs",
-          element :<PrivateRoutes>
-            <AddBlogs></AddBlogs>
-          </PrivateRoutes>
-        },
-        {
-          path: "/blogs",
-          element :<Blogs></Blogs>
-        },
-        {
-          path: "/details/:id",
-          element :<PrivateRoutes>
-            <Details></Details>
-          </PrivateRoutes>
-        },
-        {
-          path: "/wishlist",
-          element :<List></List>
-        },
-        {
-          path: "/feature",
-          element :<Feature></Feature>
-        },
-      ]
-    },
-  ]);
-  export default router
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Main></Main>,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>
+      },
+      {
+        path: "/signIn",
+        element: <SignIn></SignIn>
+      },
+      {
+        path: "/signUp",
+        element: <SignUp></SignUp>
+      },
+      {
+        path: "/addBlogs",
+        element: <PrivateRoutes>
+          <AddBlogs></AddBlogs>
+        </PrivateRoutes>
+      },
+      {
+        path: "/blogs",
+        element: <Blogs></Blogs>
+      },
+      {
+        path: "/details/:id",
+        element: <PrivateRoutes>
+          <Details></Details>
+        </PrivateRoutes>
+      },
+      {
+        path: "/wishlist",
+        element: <PrivateRoutes>
+          <List></List>
+        </PrivateRoutes>
+      },
+      {
+        path: "/update/:id",
+        element: <PrivateRoutes>
+          <Update></Update>
+        </PrivateRoutes>
+      },
+      {
+        path: "/feature",
+        element: <Feature></Feature>
+      },
+    ]
+  },
+]);
+export default router

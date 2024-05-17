@@ -46,7 +46,6 @@ const BlogCard = ({ ACard }) => {
                 <div className="">
                     <div>  <span className="text-sm font-bold text-gray-900 dark:text-white block py-4">Short Description :</span></div>
                     <span className="text-sm font-bold text-gray-900 dark:text-white">{ACard.shortDes}</span>
-
                 </div>
                 <div className=" flex-col md:flex-row justify-between gap-4 w-full">
                     <button onClick={handleWish} className="group relative inline-block text-sm font-medium text-white focus:outline-none focus:ring">
