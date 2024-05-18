@@ -46,8 +46,8 @@ const FeaturedBlogs = () => {
                                     <td className="flex items-center gap-x-3 py-3 px-6 whitespace-nowrap">
                                         <img src={item.URL} className="w-10 h-10 rounded-full" />
                                         <div>
-                                            <span className="block text-gray-700 text-sm font-medium">{item.author.authorName}</span>
-                                            <span className="block text-gray-700 text-xs">{item.author.authorEmail}</span>
+                                            <span className="block text-gray-700 text-sm font-medium">{item.author?.authorName}</span>
+                                            <span className="block text-gray-700 text-xs">{item.author?.authorEmail}</span>
                                         </div>
                                     </td>
 

@@ -40,9 +40,9 @@ const Header = () => {
         <div>
 
             <Navbar fluid rounded>
-                <Navbar.Brand href="https://flowbite-react.com">
-                    <img src="/favicon.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite React Logo" />
-                    <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Flowbite React</span>
+                <Navbar.Brand >
+                    
+                    <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white"><img className='bg-gray-800 p-2 rounded-xl' src="https://i.ibb.co/5vMhs1x/logo-white.png" alt="" srcset="" /></span>
                 </Navbar.Brand>
                 <div className="flex md:order-2">
                     <Flowbite >

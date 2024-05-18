@@ -7,15 +7,10 @@ const Footers = () => {
     return (
         <div>
             <Footer container>
-                <div className="w-full">
+                <div className="w-full p-6 rounded-lg text-white bg-gray-900">
                     <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
                         <div>
-                            <Footer.Brand
-                                href="https://flowbite.com"
-                                src="https://flowbite.com/docs/images/logo.svg"
-                                alt="Flowbite Logo"
-                                name="Flowbite"
-                            />
+                        <img className='bg-gray-800 p-2 rounded-xl' src="https://i.ibb.co/5vMhs1x/logo-white.png" alt="" srcset="" />
                         </div>
                         <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
                             <div>
