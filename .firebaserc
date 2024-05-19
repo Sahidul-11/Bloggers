@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "default": "bolgs-website",
+    "y": "bolgs-website"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
+}
