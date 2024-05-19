@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import UseContext from '../Hooks/UseContext';
 import Swal from 'sweetalert2';
+import axios from 'axios';
 const SignIn = () => {
     const navigate = useNavigate()
     const location = useLocation()
@@ -10,9 +11,11 @@ const SignIn = () => {
         singInUser
         } = UseContext()
 
-    const handleGoogle =()=>{
+    const handleGoogle = ()=>{
         googleLogIn()
+       
         .then(res=>{
+           
             if (res.user) {
                 Swal.fire({
                     position: "top",
@@ -21,6 +24,9 @@ const SignIn = () => {
                     showConfirmButton: false,
                     timer: 2000
                   });
+                   axios.post ("http://localhost:5000/jwt",{email :res?.user?.email},{
+                     withCredentials : true
+                  })
                   navigate(location.state || "/")
                   setLoading(false)
             }
@@ -52,6 +58,9 @@ const SignIn = () => {
                     showConfirmButton: false,
                     timer: 2000
                   });
+                  axios.post ("http://localhost:5000/jwt",{email : email},{
+                    withCredentials : true
+                 })
                   navigate(location.state || "/")
                   setLoading(false)
             }

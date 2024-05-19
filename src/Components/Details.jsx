@@ -14,7 +14,9 @@ const Details = () => {
 
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/comment?id=${id}`)
+        axios.get(`http://localhost:5000/comment?id=${id}`,{
+            withCredentials :true
+        })
             .then(res => {
                 setComments(res.data)
                 console.log(res.data)
@@ -24,7 +26,9 @@ const Details = () => {
             })
     }, [id, update])
     useEffect(() => {
-        axios.get(`http://localhost:5000/details?id=${id}`)
+        axios.get(`http://localhost:5000/details?id=${id}`,{
+            withCredentials : true
+        })
             .then(res => {
                 setACard(res.data)
             })

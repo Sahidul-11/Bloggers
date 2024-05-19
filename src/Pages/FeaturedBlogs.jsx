@@ -8,7 +8,9 @@ const FeaturedBlogs = () => {
     const { isPending, isError, data, error } = useQuery({
         queryKey: ['wishList'],
         queryFn: async () => {
-            const { data } = await axios.get(`http://localhost:5000/blogs`)
+            const { data } = await axios.get(`http://localhost:5000/blogs`,{
+                withCredentials : true
+            })
             return data
         },
     })
@@ -19,7 +21,7 @@ const FeaturedBlogs = () => {
     if (isError) {
         return <span>Error: {error.message}</span>
     }
-    const top10 = data.sort((a, b) => b.Description.length - a.Description.length).slice(0, 10);
+    const top10 = data.sort((a, b) => b?.Description?.length - a?.Description?.length).slice(0, 10);
     return (
         <div className="max-w-screen-xl mx-auto px-4 md:px-8 my-16">
             <div className="max-w-lg">

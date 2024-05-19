@@ -13,7 +13,9 @@ const Update = () => {
     const { isPending, isError, data, error,refetch } = useQuery({
         queryKey: ['update'],
         queryFn: async () => {
-            const { data } = await axios.get(`http://localhost:5000/details?id=${id}`)
+            const { data } = await axios.get(`http://localhost:5000/details?id=${id}`,{
+                withCredentials : true
+            })
             return data
         },
     })

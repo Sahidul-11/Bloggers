@@ -15,7 +15,9 @@ const Blogs = () => {
     })
 
     const blogFunction = async (a, b) => {
-        const { data } = await axios.get(`http://localhost:5000/blogs?Category=${a}&search=${b}`)
+        const { data } = await axios.get(`http://localhost:5000/blogs?Category=${a}&search=${b}`,{
+            withCredentials:true
+        })
         return data
 
     }

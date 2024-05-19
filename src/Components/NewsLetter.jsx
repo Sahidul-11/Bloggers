@@ -17,7 +17,7 @@ const NewsLetter = () => {
     }
     return (
         <div>
-            <div className="w-full mb-10 dark:text-white dark:bg-gray-500 bg-[url(https://source.unsplash.com/random/640x480)] bg-cover bg-center bg-no-repeat">
+            <div className="w-full mb-10 text-white dark:bg-gray-500 bg-[url(https://source.unsplash.com/random/640x480)] bg-cover bg-center bg-no-repeat bg-opacity-60">
                 <div className="container flex flex-col flex-wrap content-center justify-center p-4 py-20 mx-auto md:p-10">
                     <h1 className="text-5xl antialiased font-semibold leading-none text-center dark:text-white">Get Our Updates</h1>
                     <p className="pt-2 pb-8 text-xl antialiased text-center dark:text-white">Find out about events and other news</p>

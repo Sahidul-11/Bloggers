@@ -20,6 +20,9 @@ const SignUp = () => {
         .then(res=>{
             if (res.user) { 
                 userUpdate(name , photoURL)
+                axios.post ("http://localhost:5000/jwt",{email : email},{
+                    withCredentials : true
+                 })
                 Swal.fire({
                     position: "top",
                     icon: "success",

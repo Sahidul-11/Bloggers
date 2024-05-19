@@ -10,7 +10,9 @@ const List = () => {
     const { isPending, isError, data, error , refetch } = useQuery({
         queryKey: ['wishList'],
         queryFn: async () => {
-            const { data } = await axios.get(`http://localhost:5000/wishList?email=${user.email}`)
+            const { data } = await axios.get(`http://localhost:5000/wishList?email=${user.email}`,{
+                withCredentials: true
+            })
 
             return data
         },
