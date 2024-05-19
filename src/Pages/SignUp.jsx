@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import UseContext from '../Hooks/UseContext';
 import Swal from 'sweetalert2';
 
 const SignUp = () => {
+    const [error ,setError] = useState("")
     const navigate = useNavigate()
     const {
         createUser,
@@ -16,6 +17,19 @@ const SignUp = () => {
         const email = form.email.value;
         const photoURL = form.photoURL.value;
         const password = form.password.value;
+        if (password.length < 6) {
+
+            setError("password length must be 6 or longer ")
+            return
+        }
+        if (!/[A-Z]/.test(password)) {
+            setError("You must enter a uppercase letter")
+            return
+        }
+        if (!/[0-9]/.test(password)) {
+            setError("You must enter a lowercase letter")
+            return
+        }
         createUser(email ,password)
         .then(res=>{
             if (res.user) { 
@@ -71,6 +85,8 @@ const SignUp = () => {
                                     </div>
                                     <div className="mt-7">
                                         <input type="password" name='password' required placeholder="Enter password" className="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0" />
+
+                                    <p className=' text-red-700'>{error}</p>
                                     </div>
                                     <div className="mt-7">
                                         <button type='submit' className="bg-blue-500 w-full py-3 rounded-xl text-white shadow-xl hover:shadow-inner focus:outline-none transition duration-500 ease-in-out  transform hover:-translate-x hover:scale-105">
