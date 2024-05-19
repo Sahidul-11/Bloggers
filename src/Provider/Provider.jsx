@@ -29,7 +29,7 @@ const Provider = ({ children }) => {
     // sign out
     const signOutUser = async () => {
         setLoading(true)
-        await axios.get("http://localhost:5000/logout", {
+        await axios.get("https://blogs-wesite-client.vercel.app/logout", {
             withCredentials: true
         })
 

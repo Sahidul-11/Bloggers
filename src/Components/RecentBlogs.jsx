@@ -10,7 +10,7 @@ const RecentBlogs = () => {
     const { user } = UseContext()
     const { mutateAsync } = useMutation({
         mutationFn: async ({ blogs }) => {
-            const { data } = await axios.post("http://localhost:5000/wishList", blogs)
+            const { data } = await axios.post("https://blogs-wesite-client.vercel.app/wishList", blogs)
         },
         onSuccess: () => {
             Swal.fire({
@@ -25,7 +25,7 @@ const RecentBlogs = () => {
     const { isPending, isError, data, error } = useQuery({
         queryKey: ['recent'],
         queryFn: async () => {
-            const { data } = await axios.get(`http://localhost:5000/blogs`)
+            const { data } = await axios.get(`https://blogs-wesite-client.vercel.app/blogs`)
             return data
         },
     })

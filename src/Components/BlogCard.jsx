@@ -8,7 +8,7 @@ const BlogCard = ({ ACard }) => {
     const { user } = UseContext()
     const { mutateAsync } = useMutation({
         mutationFn: async ({ blogs }) => {
-            const { data } = await axios.post("http://localhost:5000/wishList", blogs)
+            const { data } = await axios.post("https://blogs-wesite-client.vercel.app/wishList", blogs)
         },
         onSuccess: () => {
             Swal.fire({

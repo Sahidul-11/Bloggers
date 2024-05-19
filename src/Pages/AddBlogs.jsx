@@ -18,7 +18,7 @@ const AddBlogs = () => {
         const shortDes = form.shortDes.value;
         const Description = form.Description.value;
         const blog = {title ,Category, URL,shortDes, Description , author}
-        axios.post("http://localhost:5000/blogs", blog)
+        axios.post("https://blogs-wesite-client.vercel.app/blogs", blog)
         .then(res=>{
             if (res.data) {
                 Swal.fire({

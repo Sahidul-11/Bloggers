@@ -24,7 +24,7 @@ const SignIn = () => {
                     showConfirmButton: false,
                     timer: 2000
                   });
-                   axios.post ("http://localhost:5000/jwt",{email :res?.user?.email},{
+                   axios.post ("https://blogs-wesite-client.vercel.app/jwt",{email :res?.user?.email},{
                      withCredentials : true
                   })
                   navigate(location.state || "/")
@@ -58,7 +58,7 @@ const SignIn = () => {
                     showConfirmButton: false,
                     timer: 2000
                   });
-                  axios.post ("http://localhost:5000/jwt",{email : email},{
+                  axios.post ("https://blogs-wesite-client.vercel.app/jwt",{email : email},{
                     withCredentials : true
                  })
                   navigate(location.state || "/")

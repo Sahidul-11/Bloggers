@@ -13,7 +13,7 @@ const Update = () => {
     const { isPending, isError, data, error,refetch } = useQuery({
         queryKey: ['update'],
         queryFn: async () => {
-            const { data } = await axios.get(`http://localhost:5000/details?id=${id}`,{
+            const { data } = await axios.get(`https://blogs-wesite-client.vercel.app/details?id=${id}`,{
                 withCredentials : true
             })
             return data
@@ -21,7 +21,7 @@ const Update = () => {
     })
     const { mutateAsync } = useMutation({
         mutationFn: async (change) => {
-            const { data } = await axios.put(`http://localhost:5000/details?id=${id}`, change)
+            const { data } = await axios.put(`https://blogs-wesite-client.vercel.app/details?id=${id}`, change)
             console.log(data)
         },
         onSuccess: () => {

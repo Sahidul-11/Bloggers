@@ -8,7 +8,7 @@ const FeaturedBlogs = () => {
     const { isPending, isError, data, error } = useQuery({
         queryKey: ['wishList'],
         queryFn: async () => {
-            const { data } = await axios.get(`http://localhost:5000/blogs`,{
+            const { data } = await axios.get(`https://blogs-wesite-client.vercel.app/blogs`,{
                 withCredentials : true
             })
             return data

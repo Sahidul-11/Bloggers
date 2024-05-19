@@ -34,7 +34,7 @@ const SignUp = () => {
         .then(res=>{
             if (res.user) { 
                 userUpdate(name , photoURL)
-                axios.post ("http://localhost:5000/jwt",{email : email},{
+                axios.post ("https://blogs-wesite-client.vercel.app/jwt",{email : email},{
                     withCredentials : true
                  })
                 Swal.fire({

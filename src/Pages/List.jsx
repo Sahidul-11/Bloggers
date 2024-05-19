@@ -10,7 +10,7 @@ const List = () => {
     const { isPending, isError, data, error , refetch } = useQuery({
         queryKey: ['wishList'],
         queryFn: async () => {
-            const { data } = await axios.get(`http://localhost:5000/wishList?email=${user.email}`,{
+            const { data } = await axios.get(`https://blogs-wesite-client.vercel.app/wishList?email=${user.email}`,{
                 withCredentials: true
             })
 
@@ -19,7 +19,7 @@ const List = () => {
     })
     const {mutateAsync} =useMutation({
         mutationFn: async ({id}) => {
-            const { data } = await axios.delete(`http://localhost:5000/wishList?id=${id}`)
+            const { data } = await axios.delete(`https://blogs-wesite-client.vercel.app/wishList?id=${id}`)
             
         },
         onSuccess: () => {
