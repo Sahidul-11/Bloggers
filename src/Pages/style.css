@@ -56,17 +56,6 @@ body {
     font-size: 18px;
   }
   
-  
-  
-  footer svg {
-    margin-right: 20px;
-  }
-  
-  footer a {
-    text-decoration: none;
-    color: var(--accent);
-  }
-  
   code {
     font-family: input-mono, monospace;
     font-weight: 400;
