@@ -43,7 +43,7 @@ const Header = () => {
 
     </>
     return (
-        <div>
+        <div className='z-50 sticky'>
 
             <Navbar fluid rounded>
                 <Navbar.Brand >
@@ -65,7 +65,7 @@ const Header = () => {
 
                             }
                         >
-                            <Dropdown.Header>
+                            <Dropdown.Header className='z-40'>
                                 <span className="block text-sm">{user.display}</span>
                                 <span className="block truncate text-sm font-medium">{user.email}</span>
                             </Dropdown.Header>

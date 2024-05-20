@@ -20,7 +20,7 @@ const Banner = () => {
                     </h1>
 
                     <p className="mx-auto mt-4 max-w-xl sm:text-xl/relaxed text-white">
-                    A blogger is someone who writes regularly for an online journal or website, sharing insights, opinions, and information on various topics. They often engage with readers through comments and social media, creating a community around their content.
+                    A blogger is someone who writes regularly for an online journal or website, sharing insights, opinions, and information on various 
                     </p>
 
                     <div className="mt-14 flex flex-wrap justify-center gap-4">
