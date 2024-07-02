@@ -1,8 +1,49 @@
-# React + Vite
+# Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+by using this site user can make blood donation request ...donor will see all donation reuest and he can donate ,,,
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Website Name:** BloodBank
+
+**Hosting Link:** [Hosting Live Site](https://chipper-creponne-b63c16.netlify.app/)
+
+**Git Client Link:** [Git Client LInk](https://github.com/Sahidul-11/BloodBank)
+
+**Git Link -server:** [Git Server LInk ](https://github.com/Sahidul-11/BloodBank-server)
+
+
+---
+
+## Installation
+
+Install my-project with npm
+
+**Clone the repository:**
+
+```bash
+  npm install
+  set env.local file
+  REACT_APP_API_KEY=your_api_key_here
+```
+
+
+## Features
+
+- Google Authintification
+- All device responsive
+- Mongodb Database
+- Node js
+- Admin Role
+- sweet alert
+- Volenteer role
+- Admin Dashboard
+- Stripe payment system
+- jwt
+
+---
+
+### Additional Points
+
+-React -tooltip 
+- React-simple-typewriter
