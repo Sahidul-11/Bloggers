@@ -1,16 +1,16 @@
 # Overview
 
-by using this site user can make blood donation request ...donor will see all donation reuest and he can donate ,,,
+this a public blogging page . Anyone can publish his blogs . reads other blogs ,, commment on blogs . it will increas our knowledge ,,,
 
 ---
 
-**Website Name:** BloodBank
+**Website Name:** Bloggers 
 
-**Hosting Link:** [Hosting Live Site](https://chipper-creponne-b63c16.netlify.app/)
+**Hosting Link:** [Hosting Live Site](https://bolgs-website.web.app)
 
-**Git Client Link:** [Git Client LInk](https://github.com/Sahidul-11/BloodBank)
+**Git Client Link:** [Git Client LInk](https://github.com/Sahidul-11/Bloggers)
 
-**Git Link -server:** [Git Server LInk ](https://github.com/Sahidul-11/BloodBank-server)
+**Git Link -server:** [Git Server LInk ](https://github.com/Sahidul-11/Bloggers-Server)
 
 
 ---
